@@ -140,8 +140,9 @@ const FormProductCategory: React.FC<FormProductCategoryProperties> = ({
           <ModalBody>
             <VStack position="relative">
               <FormControl isInvalid={Boolean(errors.categoryName)}>
-                <FormLabel htmlFor="firstName">Firstname</FormLabel>
+                <FormLabel htmlFor="categoryName">Category Name</FormLabel>
                 <Input
+                  id="categoryName"
                   focusBorderColor="GreenPrimary.600"
                   type="text"
                   {...register("categoryName")}
@@ -152,10 +153,12 @@ const FormProductCategory: React.FC<FormProductCategoryProperties> = ({
                 </FormErrorMessage>
               </FormControl>
               <FormControl isInvalid={Boolean(errors.categoryDescription)}>
-                <FormLabel htmlFor="message">Category Description</FormLabel>
+                <FormLabel htmlFor="categoryDescription">
+                  Category Description
+                </FormLabel>
                 <Textarea
                   focusBorderColor="GreenPrimary.600"
-                  id="message"
+                  id="categoryDescription"
                   fontSize="13px"
                   {...register("categoryDescription")}
                 />
