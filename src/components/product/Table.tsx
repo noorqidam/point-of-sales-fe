@@ -24,6 +24,7 @@ import { initialPagination, Pagination } from "@/types/pagination";
 import { useDeleteProductById } from "@/hooks/useDeleteProductById";
 import { useListProduct } from "@/hooks/useListProduct";
 import Image from "next/image";
+import FormProduct from "@/components/product/Form";
 
 const TableProduct = () => {
   const { successToast, errorToast } = usePosToast();
@@ -58,7 +59,7 @@ const TableProduct = () => {
   const header: Array<Header> = [
     { name: "No.", data: "id" },
     { name: "Product Name", data: "productName" },
-    { name: "Product Description", data: "productDescription" },
+    { name: "Product Description", data: "productDescription", size: "200px" },
     { name: "Stock", data: "stock" },
     { name: "Product Image", data: "productImage" },
     { name: "Product Category", data: "categoryName" },
@@ -216,6 +217,11 @@ const TableProduct = () => {
           </AlertDialogContent>
         </AlertDialogOverlay>
       </AlertDialog>
+      <FormProduct
+        product={product}
+        setTableRefetch={setTableRefetch}
+        formModal={formModal}
+      />
     </Box>
   );
 };
