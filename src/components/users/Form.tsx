@@ -144,6 +144,7 @@ const FormUser: React.FC<FormUserProperties> = ({
               <FormControl isInvalid={Boolean(errors.firstName)}>
                 <FormLabel htmlFor="firstName">Firstname</FormLabel>
                 <Input
+                  id="firstName"
                   focusBorderColor="GreenPrimary.600"
                   type="text"
                   {...register("firstName")}
@@ -154,6 +155,7 @@ const FormUser: React.FC<FormUserProperties> = ({
               <FormControl isInvalid={Boolean(errors.lastName)}>
                 <FormLabel htmlFor="lastName">Lastname</FormLabel>
                 <Input
+                  id="lastName"
                   focusBorderColor="GreenPrimary.600"
                   type="text"
                   {...register("lastName")}
@@ -164,6 +166,7 @@ const FormUser: React.FC<FormUserProperties> = ({
               <FormControl isInvalid={Boolean(errors.email)}>
                 <FormLabel htmlFor="email">Email</FormLabel>
                 <Input
+                  id="email"
                   focusBorderColor="GreenPrimary.600"
                   type="text"
                   {...register("email")}
@@ -207,7 +210,12 @@ const FormUser: React.FC<FormUserProperties> = ({
                   render={({ field }) => (
                     <RadioGroup m={0} {...field}>
                       <Stack direction="row">
-                        <Radio size="sm" value="male" colorScheme="green">
+                        <Radio
+                          id="gender"
+                          size="sm"
+                          value="male"
+                          colorScheme="green"
+                        >
                           Male
                         </Radio>
                         <Radio size="sm" value="female" colorScheme="green">
