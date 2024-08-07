@@ -11,7 +11,7 @@ interface MainTableProps {
   title?: JSX.Element;
   pagination: Pagination;
   data: TableHelper;
-  placeholder: string;
+  placeholder?: string;
   isDisableSearch?: boolean;
   isLoading?: boolean;
 }
